@@ -23,3 +23,15 @@ kubectl apply -f persistent-volume.yml
 ```bash
 kubectl apply -f persistent-volume-claim.yml
 ```
+
+**Go to your worker node**
+Cmds:
+sudo docker ps
+docker exec –it mysql /bin/bash
+Inside cont:
+mysql –u root –padmin
+show databases;
+use mydb;
+create table messages( id int not null auto_increment primary key, message TEXT);
+exit
+
